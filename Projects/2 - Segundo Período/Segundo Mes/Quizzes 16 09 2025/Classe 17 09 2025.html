@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I'm scripting all over the place</title>
+</head>
+<body>
+    <p id="deleteThisParagraph">My purpose is to be deleted!</p>
+    <button id="paragraphDeleter">My only task is to delete all paragraphs.</button>
+</body>
+<script>
+    const deleteParagraph = document.getElementById('deleteThisParagraph');
+    const deleteButton = document.getElementById('paragraphDeleter');
+
+    deleteButton.addEventListener('click', () => {
+        deleteParagraph.remove();
+    });
+
+</script>
+</html>
