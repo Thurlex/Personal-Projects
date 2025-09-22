@@ -8,14 +8,26 @@
 <body>
     <p id="deleteThisParagraph">My purpose is to be deleted!</p>
     <button id="paragraphDeleter">My only task is to delete all paragraphs.</button>
+    <br><br>
+    <button id="paragraphCreator">And I bring back paragraphs!</button>
 </body>
 <script>
     const deleteParagraph = document.getElementById('deleteThisParagraph');
     const deleteButton = document.getElementById('paragraphDeleter');
+    const addParagraph = document.getElementById('paragraphCreator');
+    let paragraphCounter;
 
     deleteButton.addEventListener('click', () => {
         deleteParagraph.remove();
     });
+
+    addParagraph.addEventListener('click', () => {
+        paragraphCounter++;
+        const newParagraph = document.createElement('p');
+        newParagraph.textContent(`I am child numer ${paragraphCounter}`);
+        newParagraph.classList.add('deleteThisParagraph paragraphCounter');
+        
+    })
 
 </script>
 </html>
