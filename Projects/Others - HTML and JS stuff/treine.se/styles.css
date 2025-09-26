@@ -1,0 +1,22 @@
+body {
+    font-family: Helvetica;
+}
+
+
+.mainHeader {
+    text-align: center;
+    background-color: yellowgreen;
+}
+
+
+.navbar ul {
+    list-style-type: none;
+    background-color: yellowgreen;
+    padding: 0px;
+    margin: 0px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+}
