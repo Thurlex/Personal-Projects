@@ -129,7 +129,7 @@ const pokemonObject = {
     ]
 };
 
-// 2. OBJETO USUÁRIO - Para funcionalidade de favoritos
+// 2. OBJETO USUÁRIO - Para funcionalidade de favoritos, local
 const userObject = {
     id: "user_123",
     username: "treinador_pokemon",
@@ -142,7 +142,7 @@ const userObject = {
     }
 };
 
-// 3. OBJETO FAVORITOS - Relaciona usuário com Pokémons favoritos
+// 3. OBJETO FAVORITOS - Relaciona usuário com Pokémons favoritos, local
 const favoritesObject = {
     user_id: "user_123",
 
@@ -167,12 +167,12 @@ const favoritesObject = {
             is_shiny: false
         }
     ],
-    // O total de favoritos dos 
+    // O total de favoritos do usuário
     total_favorites: 3,
     last_updated: "2025-09-20T16:45:00Z"
 };
 
-// 4. OBJETO TIPO - Informações sobre tipos de Pokémon, pode ser encontrado em https://pokeapi.co/api/v2/type/electric
+// 4. OBJETO TIPO - Informações sobre tipos de Pokémon, pode ser encontrado em: https://pokeapi.co/api/v2/type/electric
 const pokemonTypeObject = {
     id: 13,
     name: "electric",
@@ -262,7 +262,7 @@ const searchFilterObject = {
     search_timestamp: "2025-09-20T10:30:00Z"
 };
 
-// 7. OBJETO CONFIGURAÇÃO DA API - Para gerenciar requisições
+// 7. OBJETO CONFIGURAÇÃO DA API - Para gerenciar requisições à API
 const apiConfigObject = {
     base_url: "https://pokeapi.co/api/v2/",
     endpoints: {
