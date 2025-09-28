@@ -5,7 +5,11 @@
 
     deleteButton.addEventListener('click', () => {
         const paragraphsToDelete = document.querySelectorAll('.deleteThisParagraph');
-        paragraphsToDelete.forEach(paragraph => paragraph.remove());
+        if (paragraphsToDelete.length > 0) {
+            paragraphCounter--;
+            paragraphsToDelete[paragraphsToDelete.length - 1].remove(); // Removes the last paragraph
+            paragraph.remove();
+        }
     });
 
     addParagraph.addEventListener('click', () => {
