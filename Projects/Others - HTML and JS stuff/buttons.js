@@ -1,15 +1,11 @@
-const deleteParagraph = document.getElementById('deleteThisParagraph');
+    const deleteParagraph = document.getElementById('deleteThisParagraph');
     const deleteButton = document.getElementById('paragraphDeleter');
     const addParagraph = document.getElementById('paragraphCreator');
     let paragraphCounter = 0;
 
     deleteButton.addEventListener('click', () => {
-        if (paragraphCounter > 0) {
-            paragraphCounter--;
-        }
-        else {
-        deleteParagraph.remove();
-        }
+        const paragraphsToDelete = document.querySelectorAll('.deleteThisParagraph');
+        paragraphsToDelete.forEach(paragraph => paragraph.remove());
     });
 
     addParagraph.addEventListener('click', () => {
