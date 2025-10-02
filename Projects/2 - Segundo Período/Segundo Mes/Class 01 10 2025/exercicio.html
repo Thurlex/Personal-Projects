@@ -59,9 +59,16 @@
             console.log(`A quantidade de li eh: ${liAmount}`);
 
         // Ex. 4:
-        const selBtnTem = document.getElementById('btn-tema');
-            selBtnTem.addEventListener('click', () => {
+        const selBtnTema = document.getElementById('btn-tema');
+            selBtnTema.addEventListener('click', () => {
                 document.body.style.backgroundColor = '#2c3e50';
+            })
+
+        // Ex. 5:
+        const selBtnTroca = document.getElementById('btn-trocar-imagem');
+            selBtnTroca.addEventListener('click', () => {
+                const selImagem = document.getElementById('imagem');
+                selImagem.src = 'https://via.placeholder.com/300x150.png?text=Imagem+2';
             })
     </script>
 </body>
