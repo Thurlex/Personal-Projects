@@ -42,9 +42,16 @@
     <button id="btn-trocar-imagem">Trocar Imagem</button>
  
     <script>
-        const selH1 = document.getElementById('titulo')
+        // Ex. 1:
+        const selH1 = document.getElementById('titulo');
+            selH1.textContent = "Bem-vindo aos Exercícios de DOM!";
 
-        
+        // Ex. 2:
+        const selP = document.getElementsByClassName('paragrafo');
+            for (let index = 0; index < array.length; index++) {
+                const element = selP[index];
+                selP.style.color = 'green';
+            }
     </script>
 </body>
 </html>
