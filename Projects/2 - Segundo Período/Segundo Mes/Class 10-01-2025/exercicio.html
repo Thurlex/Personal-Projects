@@ -6,6 +6,7 @@
     <title>Exercícios de DOM</title>
     <style>
         body { font-family: sans-serif; padding: 20px; transition: background-color 0.3s; }
+        body.dark-mode { background-color: #2c3e50; color: #f1f1f1; }
         .container { border: 1px solid #ccc; padding: 15px; margin-top: 15px; border-radius: 5px; }
         .destaque { background-color: #f0e68c; } 
         .borda-azul { border: 2px solid #4682b4; }
@@ -16,7 +17,7 @@
         #area-de-mensagens { min-height: 50px; background-color: #f1f1f1; margin-top: 10px; padding: 10px; }
     </style>
 </head>
-<body>
+<body class="dark-mode">
  
     <h1 id="titulo">Página de Exercícios</h1>
     <p class="paragrafo">Este é o primeiro parágrafo.</p>
@@ -45,18 +46,18 @@
     <script>
         // Ex. 1:
         const selH1 = document.getElementById('titulo');
-            selH1.textContent = "Bem-vindo aos Exercícios de DOM!";
+        selH1.textContent = "Bem-vindo aos Exercícios de DOM!";
 
         // Ex. 2:
         const selP = document.getElementsByClassName('paragrafo');
-            for (let index = 0; index < selP.length; index++) {
+        for (let index = 0; index < selP.length; index++) {
             selP[index].style.color = 'green';
-            }
+        }
 
         // Ex. 3:
         const selLi = document.getElementsByTagName('li');
-            let liAmount = selLi.length;
-            console.log(`A quantidade de li eh: ${liAmount}`);
+        let liAmount = selLi.length;
+        console.log(`A quantidade de li eh: ${liAmount}`);
 
         /* Ex. 4:
         const selBtnTema = document.getElementById('btn-tema');
@@ -67,11 +68,11 @@
 
         // Ex. 5:
         const selBtnTroca = document.getElementById('btn-trocar-imagem');
-            selBtnTroca.addEventListener('click', () => {
-                const selImagem = document.getElementById('imagem');
-                selImagem.alt = 'Imagem Placeholder Mudou'
-                selImagem.src = 'https://via.placeholder.com/300x150.png?text=Imagem+2';
-            });
+        selBtnTroca.addEventListener('click', () => {
+            const selImagem = document.getElementById('imagem');
+            selImagem.alt = 'Imagem Placeholder Mudou'
+            selImagem.src = 'https://via.placeholder.com/300x150.png?text=Imagem+2';
+        });
 
         // Ex. 6:
         const getInputItem = document.getElementById('novo-item-input');
@@ -82,15 +83,32 @@
 
         // Ex. 7:
         const selAreaMsg = document.getElementById('area-de-mensagens');
-            selBtnAdd.addEventListener('click', () => {
-                const newP = document.createElement('p');
-                newP.textContent = getInputItem.value;
-                selAreaMsg.appendChild(newP);
-                getInputItem.value = '';
-            });
+        selBtnAdd.addEventListener('click', () => {
+            const newP = document.createElement('p');
+            newP.textContent = getInputItem.value;
+            selAreaMsg.appendChild(newP);
+            getInputItem.value = '';
+        });
 
         // Ex. 8:
+        const btnDark = document.getElementById('dark-mode-toggle');
+        btnDark.addEventListener('click', () => {
+            document.body.classList.toggle("dark-mode");
+        });
 
+        // Ex. 9 & 10:
+        const allLi = document.querySelectorAll('#lista-tarefas li');
+        allLi.forEach(li => {
+            // Ex. 9:
+            li.addEventListener('click', () => {
+                li.classList.toggle('item-selecionado');
+            });
+
+            // Ex. 10:
+            li.addEventListener('dblclick', () => {
+                li.remove();
+            });
+        });
 
     </script>
 </body>
