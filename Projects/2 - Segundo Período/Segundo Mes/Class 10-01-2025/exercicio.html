@@ -67,15 +67,19 @@
         const selBtnTroca = document.getElementById('btn-trocar-imagem');
             selBtnTroca.addEventListener('click', () => {
                 const selImagem = document.getElementById('imagem');
+                selImagem.alt = 'Imagem Placeholder Mudou'
                 selImagem.src = 'https://via.placeholder.com/300x150.png?text=Imagem+2';
             });
 
         // Ex. 6:
         const getInputItem = document.getElementById('novo-item-input');
         const selBtnAdd = document.getElementById('btn-adicionar');
-            selBtnAdd.addEventListener('input', (getInputItem) => {
-                alert(`${getInputItem}`);
+            selBtnAdd.addEventListener('click', () => {
+                window.alert(getInputItem.value);
             });
+
+        // Ex. 7:
+
     </script>
 </body>
 </html>
