@@ -48,28 +48,34 @@
 
         // Ex. 2:
         const selP = document.getElementsByClassName('paragrafo');
-            for (let index = 0; index < array.length; index++) {
-                const element = selP[index];
-                selP.style.color = 'green';
+            for (let index = 0; index < selP.length; index++) {
+            selP[index].style.color = 'green';
             }
 
         // Ex. 3:
         const selLi = document.getElementsByTagName('li');
-            let liAmount = selI.length;
+            let liAmount = selLi.length;
             console.log(`A quantidade de li eh: ${liAmount}`);
 
         // Ex. 4:
         const selBtnTema = document.getElementById('btn-tema');
             selBtnTema.addEventListener('click', () => {
                 document.body.style.backgroundColor = '#2c3e50';
-            })
+            });
 
         // Ex. 5:
         const selBtnTroca = document.getElementById('btn-trocar-imagem');
             selBtnTroca.addEventListener('click', () => {
                 const selImagem = document.getElementById('imagem');
                 selImagem.src = 'https://via.placeholder.com/300x150.png?text=Imagem+2';
-            })
+            });
+
+        // Ex. 6:
+        const getInputItem = document.getElementById('novo-item-input');
+        const selBtnAdd = document.getElementById('btn-adicionar');
+            selBtnAdd.addEventListener('input', (getInputItem) => {
+                alert(`${getInputItem}`);
+            });
     </script>
 </body>
 </html>
