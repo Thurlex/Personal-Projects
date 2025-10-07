@@ -11,6 +11,7 @@
         .borda-azul { border: 2px solid #4682b4; }
         .texto-grande { font-size: 24px; }
         .item-selecionado { text-decoration: line-through; color: #888; }
+        .dark-mode-toggle { background-color: #2c3e50; }
         img { max-width: 300px; display: block; margin-top: 10px; }
         #area-de-mensagens { min-height: 50px; background-color: #f1f1f1; margin-top: 10px; padding: 10px; }
     </style>
@@ -38,7 +39,7 @@
         <button id="btn-adicionar">Adicionar</button>
     </div>
  
-    <button id="btn-tema">Alternar Tema</button>
+    <button id="dark-mode-toggle">Alternar Tema</button>
     <button id="btn-trocar-imagem">Trocar Imagem</button>
  
     <script>
@@ -57,11 +58,12 @@
             let liAmount = selLi.length;
             console.log(`A quantidade de li eh: ${liAmount}`);
 
-        // Ex. 4:
+        /* Ex. 4:
         const selBtnTema = document.getElementById('btn-tema');
             selBtnTema.addEventListener('click', () => {
                 document.body.style.backgroundColor = '#2c3e50';
             });
+        */
 
         // Ex. 5:
         const selBtnTroca = document.getElementById('btn-trocar-imagem');
@@ -79,6 +81,16 @@
             });
 
         // Ex. 7:
+        const selAreaMsg = document.getElementById('area-de-mensagens');
+            selBtnAdd.addEventListener('click', () => {
+                const newP = document.createElement('p');
+                newP.textContent = getInputItem.value;
+                selAreaMsg.appendChild(newP);
+                getInputItem.value = '';
+            });
+
+        // Ex. 8:
+
 
     </script>
 </body>
